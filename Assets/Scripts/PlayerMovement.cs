@@ -6,21 +6,38 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Movespeed = 3;
     public float SideMovement = 5f;
+    public float Lane = 1;
+    public float DisLane = 2.5f;
+    public int smoothness = 20;
 
     void Update()
     {
         transform.Translate(Vector3.forward * Movespeed * Time.deltaTime, Space.World);
-        Debug.Log("Straight");
-
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.Log("Moving left");
-            transform.Translate(Vector3.left * SideMovement * Time.deltaTime);
+            Lane--;
+            if (Lane == -1)
+            {
+                Lane = 0;
+            }
         }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Debug.Log("Moving right");
-            transform.Translate(Vector3.right * SideMovement * Time.deltaTime);
+            Lane++;
+            if (Lane == 3)
+            {
+                Lane = 2;
+            }
         }
+        Vector3 targetposition = transform.position.z * transform.forward + transform.position.y * transform.up;
+        if (Lane == 0)
+        {
+            targetposition += Vector3.left * DisLane;
+        }
+        else if (Lane == 2)
+        {
+            targetposition += Vector3.right * DisLane;
+        }
+        transform.position = Vector3.Lerp(transform.position, targetposition, smoothness * Time.deltaTime);
     }
 }
