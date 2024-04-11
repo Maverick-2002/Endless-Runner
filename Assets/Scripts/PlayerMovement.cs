@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(0.45f);
         gravity = true;
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.46f);
         Jumping = false;
         gravity = false;
         //Animator.Play(Runnning);
