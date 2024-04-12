@@ -72,9 +72,9 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator JumpSequence()
     {
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.30f);
         gravity = true;
-        yield return new WaitForSeconds(0.46f);
+        yield return new WaitForSeconds(0.31f);
         Jumping = false;
         gravity = false;
         //Animator.Play(Runnning);
