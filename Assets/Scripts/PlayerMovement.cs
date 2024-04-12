@@ -59,12 +59,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (gravity == false)
             {
-                transform.Translate(Vector3.up * jumpforce * Time.deltaTime, Space.World);
+                transform.Translate(Vector3.up * Time.deltaTime * 5, Space.World);
 
             }
             if (gravity == true)
             {
-                transform.Translate(Vector3.up * -jumpforce * Time.deltaTime, Space.World);
+                transform.Translate(Vector3.up * Time.deltaTime * -5, Space.World);
 
             }
 
@@ -72,11 +72,13 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator JumpSequence()
     {
-        yield return new WaitForSeconds(0.30f);
+        float initialHeight = transform.position.y;
+        yield return new WaitForSeconds(0.45f);
         gravity = true;
-        yield return new WaitForSeconds(0.30f);
+        yield return new WaitForSeconds(0.45f);
         Jumping = false;
         gravity = false;
-        //Animator.Play(Runnning);
+       // playerObject.GetComponent<Animator>().Play("Standard Run");
+        transform.position = new Vector3(transform.position.x, initialHeight, transform.position.z);
     }
 }
