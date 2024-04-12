@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7682160114723565652}
   - component: {fileID: -5495182931133878501}
-  - component: {fileID: -2828598314764693443}
   - component: {fileID: 8234587616744500290}
+  - component: {fileID: 4578012439190182877}
   m_Layer: 0
   m_Name: GoldCoin 1
-  m_TagString: Untagged
+  m_TagString: Collectables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.42740864, y: 0.13751021, z: 0.43055898}
   m_Center: {x: -0.028884232, y: 0.07319865, z: 0.019562319}
---- !u!82 &-2828598314764693443
+--- !u!114 &8234587616744500290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790994079033864692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d871fecc4c3d3468ef8f862a14f499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationspeed: 1
+--- !u!82 &4578012439190182877
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,9 +79,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
-  m_Resource: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -153,20 +166,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8234587616744500290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5790994079033864692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d871fecc4c3d3468ef8f862a14f499, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: {fileID: 6652817975518866512, guid: d7adefad0acf36f4bbfb7937ce1a5915, type: 3}
-  rotationspeed: 1
 --- !u!1 &7678797618198338473
 GameObject:
   m_ObjectHideFlags: 0

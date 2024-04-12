@@ -5,16 +5,24 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
-    [SerializeField] private AudioSource coins;
+   // [SerializeField] private AudioSource coins;
     public int rotationspeed = 1;
-   
+    void Start()
+    {
+       // coins = GetComponent<AudioSource>();
+    }
     void Update()
     {
         transform.Rotate(0, rotationspeed, 0, Space.World);
     }
-    void OnTriggerEnter(Collider other)
+   /* void OnTriggerEnter(Collider other)
     {
-        coins.Play();
-        gameObject.SetActive(false);
-    }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            //AudioManager.instance.PlayAudio(coins);
+            gameObject.SetActive(false);
+        }
+
+    }*/
+
 }

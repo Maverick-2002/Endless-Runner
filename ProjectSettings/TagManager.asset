@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Destroy
+  - Obstacles
+  - Collectables
   layers:
   - Default
   - TransparentFX

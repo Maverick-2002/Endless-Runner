@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
 {
-     void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Destroy");
         if (collision.gameObject.CompareTag("Destroy"))
