@@ -59,12 +59,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (gravity == false)
             {
-                transform.Translate(Vector3.up * Time.deltaTime * 5, Space.World);
+                transform.Translate(Vector3.up * Time.deltaTime * jumpforce, Space.World);
 
             }
             if (gravity == true)
             {
-                transform.Translate(Vector3.up * Time.deltaTime * -5, Space.World);
+                transform.Translate(Vector3.up * Time.deltaTime * -jumpforce, Space.World);
 
             }
 
