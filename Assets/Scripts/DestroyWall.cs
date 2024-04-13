@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log("Destroy");
-        if (collision.gameObject.CompareTag("Destroy"))
+        if (other.gameObject.CompareTag("Destroy"))
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
         }
+
     }
 }

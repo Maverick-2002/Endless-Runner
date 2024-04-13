@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpforce;
     public bool Jumping = false;
     public bool gravity = false;
+    public Animator animator;
+    public AudioSource Jump;
 
     void Update()
     {
@@ -21,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
             if (Jumping == false)
             {
                 Jumping = true;
-                //Animator.Play(Jump);
+                Jump.Play();
+                animator.SetBool("Jumping", true);
                 StartCoroutine(JumpSequence());
 
             }
@@ -78,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.45f);
         Jumping = false;
         gravity = false;
-       // playerObject.GetComponent<Animator>().Play("Standard Run");
+        animator.SetBool("Jumping", false);
         transform.position = new Vector3(transform.position.x, initialHeight, transform.position.z);
     }
 }
