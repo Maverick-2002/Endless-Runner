@@ -1,22 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float Movespeed = 3;
+    public float MoveSpeed = 8;
     public float Lane = 1;
     public float DisLane = 2.5f;
     public int smoothness = 20;
-    public float jumpforce;
+    public float jumpForce=4;
     public bool Jumping = false;
     public bool gravity = false;
     public Animator animator;
     public AudioSource Jump;
+    private float distanceCovered = 0f;
+    public float multiplier = 2f;
+    public float score;
+    private float timeElapsed;
 
     void Update()
     {
+        distanceCovered += Time.deltaTime * MoveSpeed;
+        timeElapsed += Time.deltaTime;
+        if (timeElapsed >= 30)
+        {
+            MoveSpeed *= 1.2f;
+            timeElapsed = 0f;
+            UIManager.Instance.DifficultyUI();
+        }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
@@ -26,11 +36,10 @@ public class PlayerMovement : MonoBehaviour
                 Jump.Play();
                 animator.SetBool("Jumping", true);
                 StartCoroutine(JumpSequence());
-
             }
         }
 
-        transform.Translate(Vector3.forward * Movespeed * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.forward * MoveSpeed * Time.deltaTime, Space.World);
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Lane--;
@@ -62,17 +71,21 @@ public class PlayerMovement : MonoBehaviour
         {
             if (gravity == false)
             {
-                transform.Translate(Vector3.up * Time.deltaTime * jumpforce, Space.World);
-
+                transform.Translate(Vector3.up * Time.deltaTime * jumpForce, Space.World);
             }
             if (gravity == true)
             {
-                transform.Translate(Vector3.up * Time.deltaTime * -jumpforce, Space.World);
-
+                transform.Translate(Vector3.up * Time.deltaTime * -jumpForce, Space.World);
             }
-
         }
     }
+
+    public int CalculateScore()
+    {
+        score = distanceCovered * multiplier;
+        return (int)(score);
+    }
+
     IEnumerator JumpSequence()
     {
         float initialHeight = transform.position.y;

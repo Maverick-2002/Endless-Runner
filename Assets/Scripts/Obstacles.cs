@@ -7,6 +7,12 @@ public class Obstacles : MonoBehaviour
     public GameObject Model;
     public GameObject LevelGenerate;
     [SerializeField] private AudioSource fall;
+    public PlayerMovement player;
+    public UIManager high;
+    private void Start()
+    {
+        player = GetComponent<PlayerMovement>();
+    }
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Obstacles")){
@@ -15,6 +21,7 @@ public class Obstacles : MonoBehaviour
             Model.GetComponent<Animator>().SetTrigger("Death");
             fall.Play();
             LevelGenerate.GetComponent<LevelGenerator>().enabled = false;
+            high.UpdateHighScore((int)player.score);
 
         }
 
