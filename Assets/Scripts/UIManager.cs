@@ -28,22 +28,22 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         float highScore = PlayerPrefs.GetFloat("HighScore", 0);
-        highScoreText.text = "High Score: " + highScore.ToString();
+        highScoreText.text = ": " + highScore.ToString();
     }
     void Update()
     {
         int score = playerController.CalculateScore();
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = ": " + score.ToString();
     }
     public void Score()
     {
         score++;
-        coinText.text = "Coins: " + score;
+        coinText.text = ": " + score;
     }
     public void DifficultyUI()
     {
         Dif++;
-        DifText.text = "Difficulty Level: " + Dif;
+        DifText.text = ": " + Dif;
     }
     public void UpdateHighScore(float newScore)
     {
