@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacles : MonoBehaviour
 {
     public GameObject Model;
+    public GameObject LevelGenerate;
     [SerializeField] private AudioSource coin;
     void OnTriggerEnter(Collider collision)
     {
@@ -12,6 +13,7 @@ public class Obstacles : MonoBehaviour
             gameObject.GetComponent<BoxCollider>().enabled = false;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             Model.GetComponent<Animator>().SetTrigger("Death");
+            LevelGenerate.GetComponent<LevelGenerator>().enabled = false;
 
         }
 
