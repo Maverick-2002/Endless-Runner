@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public AudioSource Jump;
     private float distanceCovered = 0f;
-    public float multiplier = 2f;
     public float score;
     private float timeElapsed;
 
@@ -82,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int CalculateScore()
     {
-        score = distanceCovered * multiplier;
+        score = distanceCovered * 2;
         return (int)(score);
     }
 
