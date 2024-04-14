@@ -9,6 +9,11 @@ public class HomeScreen : MonoBehaviour
     public Text highScoreText;
     public GameObject highscore;
     public GameObject MainMenu;
+    public AudioSource bgm;
+    private void Start()
+    {
+        bgm.Play();
+    }
     public void LevelLoaded()
     {
         SceneManager.LoadScene(1);

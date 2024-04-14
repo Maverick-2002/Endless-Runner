@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     public GameObject resumemenu;
     public GameObject Deathmenu;
     public Text FscoreText;
+    public AudioSource bgmSource;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -65,12 +66,14 @@ public class UIManager : MonoBehaviour
         pausemenu.SetActive(true);
         resumemenu.SetActive(false);
         Deathmenu.SetActive(false);
+        bgmSource.Stop();
     }
     public void HomeUI()
     {
         pausemenu.SetActive(false);
         resumemenu.SetActive(true);
         Deathmenu.SetActive(false);
+        bgmSource.Play();
     }
 
     public void DeathUI()
@@ -80,6 +83,6 @@ public class UIManager : MonoBehaviour
         resumemenu.SetActive(false);
         int score = playerController.CalculateScore();
         FscoreText.text = score.ToString();
-
+        bgmSource.Stop();
     }
 }
