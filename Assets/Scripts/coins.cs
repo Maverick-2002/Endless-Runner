@@ -10,7 +10,7 @@ public class coins : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Collectables"))
         {
-            UIManager.Instance.Score();
+            UIManager.Instance.Coin();
             coin.Play();
             Destroy(collision.gameObject);
         }

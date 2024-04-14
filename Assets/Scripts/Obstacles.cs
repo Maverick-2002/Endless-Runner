@@ -22,6 +22,7 @@ public class Obstacles : MonoBehaviour
             fall.Play();
             LevelGenerate.GetComponent<LevelGenerator>().enabled = false;
             high.UpdateHighScore((int)player.score);
+            UIManager.Instance.DeathUI();
 
         }
 
