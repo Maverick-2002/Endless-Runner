@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int CalculateScore()
     {
-        score = distanceCovered * 2;
+        score = distanceCovered * 2.5f;
         return (int)(score);
     }
 
