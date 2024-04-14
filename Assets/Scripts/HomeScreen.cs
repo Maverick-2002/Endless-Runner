@@ -21,7 +21,6 @@ public class HomeScreen : MonoBehaviour
     {
         float highScore = PlayerPrefs.GetFloat("HighScore", 0);
         highScoreText.text = highScore.ToString();
-        Debug.Log(highScore);
     }
     public void HighScoreMenu()
     {
@@ -33,5 +32,4 @@ public class HomeScreen : MonoBehaviour
         highscore.SetActive(false);
         MainMenu.SetActive(true);
     }
-
 }

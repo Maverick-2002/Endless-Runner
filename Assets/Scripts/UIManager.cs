@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public PlayerMovement playerController;
     public Text highScoreText;
     public Text DifText;
+    public float highScore;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,7 +28,7 @@ public class UIManager : MonoBehaviour
     }
     private void Start()
     {
-        float highScore = PlayerPrefs.GetFloat("HighScore", 0);
+        highScore = PlayerPrefs.GetFloat("HighScore", 0);
         highScoreText.text = ": " + highScore.ToString();
     }
     void Update()
@@ -47,7 +48,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateHighScore(float newScore)
     {
-        float oldHighScore = PlayerPrefs.GetFloat("HighScore", 0);
+        float oldHighScore = highScore;
         if (newScore > oldHighScore)
         {
             PlayerPrefs.SetFloat("HighScore", newScore);
