@@ -47,7 +47,6 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateHighScore(float newScore)
     {
-        // Update and save the high score if a new high score is achieved
         float oldHighScore = PlayerPrefs.GetFloat("HighScore", 0);
         if (newScore > oldHighScore)
         {
