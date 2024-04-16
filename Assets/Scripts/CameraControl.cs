@@ -10,9 +10,7 @@ public class CameraControl : MonoBehaviour
     void Start()
     {
         offset = transform.position - target.position;
-        
     }
-
     // Update is called once per frame
     void LateUpdate()
     {

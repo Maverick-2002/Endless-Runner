@@ -18,7 +18,6 @@ public class LevelGenerator : MonoBehaviour
             StartCoroutine(LevelGenerate());
         }
     }
-
     IEnumerator LevelGenerate()
     {
         SecNo = Random.Range(0, Environment.Length);
@@ -27,6 +26,4 @@ public class LevelGenerator : MonoBehaviour
         yield return new WaitForSeconds(7f);
         creatingSection = false;
     }
-
-  
 }

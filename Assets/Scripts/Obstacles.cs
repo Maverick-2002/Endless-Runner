@@ -10,7 +10,6 @@ public class Obstacles : MonoBehaviour
     public PlayerMovement player;
     public UIManager high;
     public AudioSource bgm;
-  
     private void Start()
     {
         player = GetComponent<PlayerMovement>();
@@ -27,11 +26,9 @@ public class Obstacles : MonoBehaviour
             StartCoroutine(Death());
             bgm.Stop();
         }
-
     }
     IEnumerator Death()
     {
-        
         yield return new WaitForSeconds(2.5f);
         UIManager.Instance.DeathUI();
     }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    // public static UIManager _Instance { get; private set; }
     public static UIManager Instance;
     private int coin = 0;
     private int Dif = 1;
@@ -75,7 +74,6 @@ public class UIManager : MonoBehaviour
         Deathmenu.SetActive(false);
         bgmSource.Play();
     }
-
     public void DeathUI()
     {
         Deathmenu.SetActive(true);
