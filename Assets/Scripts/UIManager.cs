@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("HighScore", newScore);
             PlayerPrefs.Save();
-            highScoreText.text = "High Score: " + newScore.ToString();
+            highScoreText.text = ": " + newScore.ToString();
         }
     }
     public void PauseMenu()
