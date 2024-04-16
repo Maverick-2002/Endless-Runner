@@ -739,6 +739,7 @@ MonoBehaviour:
   fall: {fileID: 233751000}
   player: {fileID: 233750994}
   high: {fileID: 1934788481}
+  bgm: {fileID: 1934788483}
 --- !u!82 &233751000
 AudioSource:
   m_ObjectHideFlags: 0

@@ -939,6 +939,8 @@ MonoBehaviour:
   highscore: {fileID: 53775209}
   MainMenu: {fileID: 1609217686}
   bgm: {fileID: 427382408}
+  animator: {fileID: 109987866414949798}
+  time: 0
 --- !u!82 &427382408
 AudioSource:
   m_ObjectHideFlags: 0

@@ -83,6 +83,5 @@ public class UIManager : MonoBehaviour
         resumemenu.SetActive(false);
         int score = playerController.CalculateScore();
         FscoreText.text = score.ToString();
-        bgmSource.Stop();
     }
 }

@@ -128,8 +128,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.6109846, y: 3.5298572, z: 3.9817624}
-  m_Center: {x: -0.019050837, y: 0.4600162, z: -0.45571715}
+  m_Size: {x: 3.610985, y: 3.5298574, z: 3.5504913}
+  m_Center: {x: -0.019050857, y: 0.46001613, z: -0.6713545}
 --- !u!1 &698467636768084753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,8 +1839,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7150884, y: 1.0520426, z: 2.0103934}
-  m_Center: {x: -0.16960928, y: 0.394376, z: 0.25631353}
+  m_Size: {x: 1.7150884, y: 1.0520426, z: 1.5371666}
+  m_Center: {x: -0.1696093, y: 0.394376, z: 0.019699646}
 --- !u!1 &5350571339594896713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,7 +2577,7 @@ Transform:
   m_GameObject: {fileID: 7509078648943011909}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 0.49995613, z: 9.74}
+  m_LocalPosition: {x: -3.6, y: 0.49995613, z: 9.8}
   m_LocalScale: {x: 0.25, y: 0.217155, z: 0.217155}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2655,8 +2655,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 24.703838, y: 14.804796, z: 13.901815}
-  m_Center: {x: 0.109063625, y: 7.0452604, z: 2.1014273}
+  m_Size: {x: 24.703838, y: 14.804795, z: 11.666554}
+  m_Center: {x: 0.1090641, y: 7.04526, z: 0.9837974}
 --- !u!1 &7849210885505111627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,6 +4002,22 @@ PrefabInstance:
     - target: {fileID: 4137486168269956, guid: da41fd2967a439d409358c2214a5409e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620543323675972657, guid: da41fd2967a439d409358c2214a5409e, type: 3}
+      propertyPath: m_Size.z
+      value: 3.7898765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620543323675972657, guid: da41fd2967a439d409358c2214a5409e, type: 3}
+      propertyPath: m_Center.x
+      value: 0.8464904
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620543323675972657, guid: da41fd2967a439d409358c2214a5409e, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0074551105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620543323675972657, guid: da41fd2967a439d409358c2214a5409e, type: 3}
+      propertyPath: m_Center.z
+      value: -0.3182171
       objectReference: {fileID: 0}
     - target: {fileID: 8620543323675972657, guid: da41fd2967a439d409358c2214a5409e, type: 3}
       propertyPath: m_IsTrigger

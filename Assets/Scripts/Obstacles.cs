@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 public class Obstacles : MonoBehaviour
@@ -9,6 +10,8 @@ public class Obstacles : MonoBehaviour
     [SerializeField] private AudioSource fall;
     public PlayerMovement player;
     public UIManager high;
+    public AudioSource bgm;
+  
     private void Start()
     {
         player = GetComponent<PlayerMovement>();
@@ -22,9 +25,15 @@ public class Obstacles : MonoBehaviour
             fall.Play();
             LevelGenerate.GetComponent<LevelGenerator>().enabled = false;
             high.UpdateHighScore((int)player.score);
-            UIManager.Instance.DeathUI();
-
+            StartCoroutine(Death());
+            bgm.Stop();
         }
 
+    }
+    IEnumerator Death()
+    {
+        
+        yield return new WaitForSeconds(2.5f);
+        UIManager.Instance.DeathUI();
     }
 }
