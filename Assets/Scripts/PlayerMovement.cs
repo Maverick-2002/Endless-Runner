@@ -7,11 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float Lane = 1;
     public float DisLane = 2.5f;
     public int smoothness = 20;
-    public float jumpForce=4;
-    public bool Jumping = false;
-    public bool gravity = false;
     public Animator animator;
-    public AudioSource Jump;
     private float distanceCovered = 0f;
     public float score;
     private float timeElapsed;
@@ -25,17 +21,6 @@ public class PlayerMovement : MonoBehaviour
             MoveSpeed *= 1.2f;
             timeElapsed = 0f;
             UIManager.Instance.DifficultyUI();
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Jumping == false)
-            {
-                Jumping = true;
-                Jump.Play();
-                animator.SetBool("Jumping", true);
-                StartCoroutine(JumpSequence());
-            }
         }
 
         transform.Translate(Vector3.forward * MoveSpeed * Time.deltaTime, Space.World);
@@ -65,35 +50,11 @@ public class PlayerMovement : MonoBehaviour
             targetposition += Vector3.right * DisLane;
         }
         transform.position = Vector3.Lerp(transform.position, targetposition, smoothness * Time.deltaTime);
-
-        if (Jumping == true)
-        {
-            if (gravity == false)
-            {
-                transform.Translate(Vector3.up * Time.deltaTime * jumpForce, Space.World);
-            }
-            if (gravity == true)
-            {
-                transform.Translate(Vector3.up * Time.deltaTime * -jumpForce, Space.World);
-            }
-        }
     }
 
     public int CalculateScore()
     {
         score = distanceCovered * 2.5f;
         return (int)(score);
-    }
-
-    IEnumerator JumpSequence()
-    {
-        float initialHeight = transform.position.y;
-        yield return new WaitForSeconds(0.45f);
-        gravity = true;
-        yield return new WaitForSeconds(0.45f);
-        Jumping = false;
-        gravity = false;
-        animator.SetBool("Jumping", false);
-        transform.position = new Vector3(transform.position.x, initialHeight, transform.position.z);
     }
 }
