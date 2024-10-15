@@ -19,7 +19,7 @@ public class Obstacles : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacles")){
             gameObject.GetComponent<BoxCollider>().enabled = false;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
-            Model.GetComponent<Animator>().SetTrigger("Death");
+            //Model.GetComponent<Animator>().SetTrigger("Death");
             fall.Play();
             LevelGenerate.GetComponent<LevelGenerator>().enabled = false;
             high.UpdateHighScore((int)player.score);
