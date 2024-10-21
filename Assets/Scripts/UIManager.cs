@@ -47,6 +47,7 @@ public class UIManager : MonoBehaviour
     }
     public void DifficultyUI()
     {
+        print(Dif);
         Dif++;
         DifText.text = ": " + Dif;
     }

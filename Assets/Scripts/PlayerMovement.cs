@@ -3,53 +3,72 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MoveSpeed = 8;
     public float Lane = 1;
     public float DisLane = 2.5f;
     public int smoothness = 20;
     public Animator animator;
     private float distanceCovered = 0f;
     public float score;
-    private float timeElapsed;
+
+    // New variables for rotation
+    private float targetTiltZ = 0f;
+    private float tiltAngle = 15f; // The angle to tilt when changing lanes
+    private float rotationSpeed = 5f; // Speed of tilt transition
+    private bool isChangingLane = false;
+    private float laneChangeDelay = 0.15f; // Delay before lane change
 
     void Update()
     {
-        distanceCovered += Time.deltaTime * MoveSpeed;
-        timeElapsed += Time.deltaTime;
-        if (timeElapsed >= 30)
+        distanceCovered += Time.deltaTime * -PlatformMovement.MoveSpeed;
+
+        // Check for lane change input
+        if (!isChangingLane)
         {
-            MoveSpeed *= 1.2f;
-            timeElapsed = 0f;
-            UIManager.Instance.DifficultyUI();
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                if (Lane > 0)
+                {
+                    StartCoroutine(ChangeLane(-1));
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                if (Lane < 2)
+                {
+                    StartCoroutine(ChangeLane(1));
+                }
+            }
         }
 
-        transform.Translate(Vector3.forward * MoveSpeed * Time.deltaTime, Space.World);
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Lane--;
-            if (Lane == -1)
-            {
-                Lane = 0;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Lane++;
-            if (Lane == 3)
-            {
-                Lane = 2;
-            }
-        }
-        Vector3 targetposition = transform.position.z * transform.forward + transform.position.y * transform.up;
+        // Calculate target position based on the current lane
+        Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * Vector3.up;
         if (Lane == 0)
         {
-            targetposition += Vector3.left * DisLane;
+            targetPosition += Vector3.left * DisLane;
         }
         else if (Lane == 2)
         {
-            targetposition += Vector3.right * DisLane;
+            targetPosition += Vector3.right * DisLane;
         }
-        transform.position = Vector3.Lerp(transform.position, targetposition, smoothness * Time.deltaTime);
+
+        // Smoothly move to the target position
+        transform.position = Vector3.Lerp(transform.position, targetPosition, smoothness * Time.deltaTime);
+
+        // Smoothly interpolate rotation to target tilt angle
+        Quaternion targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, -targetTiltZ);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
+    IEnumerator ChangeLane(int direction)
+    {
+        isChangingLane = true;
+        targetTiltZ = direction * tiltAngle;
+        // Wait for the delay before changing lanes
+        yield return new WaitForSeconds(laneChangeDelay);
+       
+        Lane += direction;
+        targetTiltZ = 0f; // Reset tilt after switching
+        isChangingLane = false;
     }
 
     public int CalculateScore()

@@ -33,12 +33,14 @@ public class PauseMenu : MonoBehaviour
         UIManager.Instance.HomeUI();
         Time.timeScale = 1f;
         GamePaused = false;
+        
     }
     public void Restart()
     {
         SceneManager.LoadScene(1);
         UIManager.Instance.HomeUI();
         Time.timeScale = 1f;
+        PlatformMovement.MoveSpeed = -8f;
     }
     public void Exit()
     {

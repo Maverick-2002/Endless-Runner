@@ -8,17 +8,20 @@ public class Obstacles : MonoBehaviour
     public GameObject LevelGenerate;
     [SerializeField] private AudioSource fall;
     public PlayerMovement player;
+    public PlatformMovement PlatformMovement;
     public UIManager high;
     public AudioSource bgm;
     private void Start()
     {
         player = GetComponent<PlayerMovement>();
+
     }
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Obstacles")){
             gameObject.GetComponent<BoxCollider>().enabled = false;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+            PlatformMovement.MoveSpeed = 0; 
             //Model.GetComponent<Animator>().SetTrigger("Death");
             fall.Play();
             LevelGenerate.GetComponent<LevelGenerator>().enabled = false;

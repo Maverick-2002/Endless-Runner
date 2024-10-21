@@ -739,6 +739,7 @@ MonoBehaviour:
   LevelGenerate: {fileID: 1660473213}
   fall: {fileID: 233751000}
   player: {fileID: 233750994}
+  PlatformMovement: {fileID: 0}
   high: {fileID: 1934788481}
   bgm: {fileID: 1934788483}
 --- !u!82 &233751000
@@ -3967,6 +3968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: safari
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 042c7d0abfe7add429bf59451156b2a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4764,6 +4769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2741985501583229314}
   - component: {fileID: 4722556609155584422}
+  - component: {fileID: 4722556609155584423}
   m_Layer: 0
   m_Name: Entry
   m_TagString: Destroy
@@ -5068,6 +5074,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4722556609155584423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225589592196011785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5db66bad8db74a4ab60d906c70fe42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &4871308064037087317
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -11790,6 +11790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141500210646580320}
   - component: {fileID: 7243252918600148829}
+  - component: {fileID: -6193889192716262509}
   m_Layer: 0
   m_Name: Pivot En3
   m_TagString: Destroy
@@ -11836,6 +11837,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6193889192716262509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6644214827666749506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5db66bad8db74a4ab60d906c70fe42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: -8
 --- !u!1 &6762228812009716702
 GameObject:
   m_ObjectHideFlags: 0
@@ -23002,11 +23016,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4449120862878004, guid: 7c1b7eb3905d5694688d9bb9fe2c0d47, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10.964362
+      value: 9.6705675
       objectReference: {fileID: 0}
     - target: {fileID: 4449120862878004, guid: 7c1b7eb3905d5694688d9bb9fe2c0d47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.62
+      value: 1.1238
       objectReference: {fileID: 0}
     - target: {fileID: 4449120862878004, guid: 7c1b7eb3905d5694688d9bb9fe2c0d47, type: 3}
       propertyPath: m_LocalPosition.y
