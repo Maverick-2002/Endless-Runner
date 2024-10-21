@@ -10,7 +10,7 @@ public class HomeScreen : MonoBehaviour
     public GameObject highscore;
     public GameObject MainMenu;
     public AudioSource bgm;
-    public Animator animator;
+    //public Animator animator;
     public float time;
     public void Start()
     {
@@ -19,23 +19,23 @@ public class HomeScreen : MonoBehaviour
     }
     public void Update()
     {
-        time += Time.deltaTime;
-        if (time < 10)
-        {
-            animator.SetInteger("Trans",10);
-        }
-        if (time >= 10)
-        {
-            animator.SetInteger("Trans", 20);
-        }
-        if (time >=20)
-        {
-            animator.SetInteger("Trans", 30);
-        }
-        if (time >= 35)
-        {
-            time = 0;
-        }
+        //time += Time.deltaTime;
+        //if (time < 10)
+        //{
+        //    animator.SetInteger("Trans",10);
+        //}
+        //if (time >= 10)
+        //{
+        //    animator.SetInteger("Trans", 20);
+        //}
+        //if (time >=20)
+        //{
+        //    animator.SetInteger("Trans", 30);
+        //}
+        //if (time >= 35)
+        //{
+        //    time = 0;
+        //}
     }
     public void LevelLoaded()
     {
