@@ -22,7 +22,7 @@ public class LevelGenerator : MonoBehaviour
     {
         SecNo = Random.Range(0, Environment.Length);
         GameObject newSection = Instantiate(Environment[SecNo], new Vector3(0, 0, PosZ), Quaternion.identity);
-        PosZ += -50;
+        PosZ += 100;
         yield return new WaitForSeconds(7f);
         creatingSection = false;
     }
