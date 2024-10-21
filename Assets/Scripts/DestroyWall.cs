@@ -6,10 +6,11 @@ public class DestroyWall : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Destroy");
+        
         if (other.gameObject.CompareTag("Destroy"))
         {
             Destroy(other.gameObject);
+            Debug.Log("Destroy");
         }
 
     }

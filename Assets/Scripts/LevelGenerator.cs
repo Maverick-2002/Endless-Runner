@@ -8,6 +8,7 @@ public class LevelGenerator : MonoBehaviour
     public float PosZ;
     public bool creatingSection = false;
     public int SecNo;
+    private float timeElapsed;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +18,7 @@ public class LevelGenerator : MonoBehaviour
             creatingSection = true;
             StartCoroutine(LevelGenerate());
         }
+        Difficulty();
     }
     IEnumerator LevelGenerate()
     {
@@ -25,5 +27,17 @@ public class LevelGenerator : MonoBehaviour
         PosZ += 100;
         yield return new WaitForSeconds(7f);
         creatingSection = false;
+    }
+    void Difficulty()
+    {
+        timeElapsed += Time.deltaTime;
+
+        if (timeElapsed >= 30)
+        {
+            timeElapsed = 0f;
+            PlatformMovement.MoveSpeed *= 1.2f;
+            UIManager.Instance.DifficultyUI();
+            print(PlatformMovement.MoveSpeed);
+        }
     }
 }
