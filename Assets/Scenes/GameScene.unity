@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 233750996}
   - component: {fileID: 233750998}
   - component: {fileID: 233751000}
+  - component: {fileID: 233751001}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -838,6 +839,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &233751001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233750988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf793a7fc743fb41a1a964ae72d2188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sections:
+  - {fileID: 7176188501330382114, guid: 9cf823a76f15ee346844ddb8fa16e967, type: 3}
+  - {fileID: 7303711260895887485, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
+  - {fileID: 6644214827666749506, guid: f9be4b766fac91044909fa49db7a0717, type: 3}
 --- !u!4 &240962311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8625599956569744936, guid: d7adefad0acf36f4bbfb7937ce1a5915, type: 3}
@@ -3436,13 +3453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56082f423ad9604fb75f5ecca636533, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Environment:
-  - {fileID: 7176188501330382114, guid: 9cf823a76f15ee346844ddb8fa16e967, type: 3}
-  - {fileID: 7303711260895887485, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-  - {fileID: 6644214827666749506, guid: f9be4b766fac91044909fa49db7a0717, type: 3}
-  PosZ: 250
-  creatingSection: 0
-  SecNo: 0
 --- !u!4 &1660473215
 Transform:
   m_ObjectHideFlags: 0
@@ -5286,30 +5296,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 343690306067678509, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: Model
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 343690306067678509, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 233750988}
-    - target: {fileID: 2432394159561892129, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: Model
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432394159561892129, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 233750988}
-    - target: {fileID: 2792146287917787478, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: Model
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2792146287917787478, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 233750988}
     - target: {fileID: 4065330591508476098, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5350,30 +5336,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5638434201362068644, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5091678
-      objectReference: {fileID: 0}
-    - target: {fileID: 5638434201362068644, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 5638434201362068644, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.21
-      objectReference: {fileID: 0}
     - target: {fileID: 7303711260895887485, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
       propertyPath: m_Name
       value: Pivot En2
       objectReference: {fileID: 0}
-    - target: {fileID: 8547365260102470071, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: Model
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547365260102470071, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 233750988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
