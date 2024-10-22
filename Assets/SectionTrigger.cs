@@ -16,8 +16,8 @@ public class SectionTrigger : MonoBehaviour
     // Offset for new maps (104 units along the Z-axis)
     public float mapOffset = 104f;
 
-    // Trigger to detect when the map crosses
-    public GameObject triggerObject;
+    // Tag to detect when the map crosses (set this to the tag you want to compare)
+    public string triggerTag = "Destroy"; // Make sure to set this to the appropriate tag
 
     // Start is called before the first frame update
     void Start()
@@ -34,13 +34,14 @@ public class SectionTrigger : MonoBehaviour
         }
     }
 
-    // Method called when the map crosses the trigger
+    // Method called when an object enters the trigger
     void OnTriggerEnter(Collider other)
     {
-        // Check if the map crossed the trigger
-        if (other.gameObject == triggerObject)
+        // Check if the entering object has the specified tag
+        if (other.CompareTag(triggerTag))
         {
-            print("Triger calle");
+            print("Trigger called");
+
             // Get the position of the last map (third or the most recently spawned one)
             Vector3 lastMapPosition = lastMap.transform.position;
 
