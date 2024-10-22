@@ -1083,9 +1083,7 @@ PrefabInstance:
       value: Pivot En1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 804706004512818966, guid: 9cf823a76f15ee346844ddb8fa16e967, type: 3}
-    - {fileID: 2865429041952751675, guid: 9cf823a76f15ee346844ddb8fa16e967, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf823a76f15ee346844ddb8fa16e967, type: 3}
@@ -4826,7 +4824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 141500210646580320, guid: f9be4b766fac91044909fa49db7a0717, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 153.88
+      value: 153.41
       objectReference: {fileID: 0}
     - target: {fileID: 141500210646580320, guid: f9be4b766fac91044909fa49db7a0717, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5306,7 +5304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4065330591508476098, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 50
+      value: 50.66
       objectReference: {fileID: 0}
     - target: {fileID: 4065330591508476098, guid: 91b9e4a5935048348b1c836fe344fff2, type: 3}
       propertyPath: m_LocalRotation.w

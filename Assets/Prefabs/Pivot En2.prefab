@@ -12649,7 +12649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2061713834275675616
 Transform:
   m_ObjectHideFlags: 0
@@ -13085,7 +13085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8312607479131904355
 Transform:
   m_ObjectHideFlags: 0
@@ -16656,7 +16656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6757051595935972085
 Transform:
   m_ObjectHideFlags: 0
@@ -23265,7 +23265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8559787523279412107
 Transform:
   m_ObjectHideFlags: 0
@@ -23728,7 +23728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8032066213228229707
 Transform:
   m_ObjectHideFlags: 0
@@ -24561,7 +24561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7525055748651473145
 Transform:
   m_ObjectHideFlags: 0
@@ -30557,7 +30557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3472269769039267487
 Transform:
   m_ObjectHideFlags: 0
@@ -31377,6 +31377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fog
       objectReference: {fileID: 0}
+    - target: {fileID: 6243744252924733975, guid: f0f893b958a5365469cbbbaeae6d6ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8624953610355569815, guid: f0f893b958a5365469cbbbaeae6d6ed0, type: 3}
       propertyPath: m_LocalScale.z
       value: 4.4372993
@@ -31608,6 +31612,10 @@ PrefabInstance:
     - target: {fileID: 6243744252924733975, guid: f0f893b958a5365469cbbbaeae6d6ed0, type: 3}
       propertyPath: m_Name
       value: Fog (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243744252924733975, guid: f0f893b958a5365469cbbbaeae6d6ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8624953610355569815, guid: f0f893b958a5365469cbbbaeae6d6ed0, type: 3}
       propertyPath: m_LocalScale.z
