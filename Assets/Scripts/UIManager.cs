@@ -19,8 +19,6 @@ public class UIManager : MonoBehaviour
     public GameObject Deathmenu;
     public Text FscoreText;
     public Slider fuelSlider;
-
-    // New variable to track player's alive status
     private bool isPlayerAlive = true;
 
     private void Awake()
@@ -65,7 +63,6 @@ public class UIManager : MonoBehaviour
 
     public void FuelDecrease()
     {
-        // Only decrease fuel if the player is alive
         if (isPlayerAlive)
         {
             fuel -= 5;

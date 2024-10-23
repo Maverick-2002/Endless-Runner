@@ -6,10 +6,8 @@ public class PlayerMovement : MonoBehaviour
     public float Lane = 1;
     public float DisLane = 2.5f;
     public int smoothness = 20;
-    public Animator animator;
     private float distanceCovered = 0f;
     public float score;
-
     private float targetTiltZ = 0f;
     private float tiltAngle = 15f;
     private float rotationSpeed = 5f;
