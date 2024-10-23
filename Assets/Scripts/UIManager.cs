@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     private int coin = 0;
+    public static int fuel = 50;
+    private int maxfuel = 50;
     private int Dif = 1;
     public Text coinText;
     public Text scoreText;
@@ -19,6 +22,7 @@ public class UIManager : MonoBehaviour
     public GameObject Deathmenu;
     public Text FscoreText;
     public AudioSource bgmSource;
+    public Slider fuelSlider;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -34,6 +38,9 @@ public class UIManager : MonoBehaviour
     {
         highScore = PlayerPrefs.GetFloat("HighScore", 0);
         highScoreText.text = ": " + highScore.ToString();
+        fuelSlider.maxValue = maxfuel;
+        fuelSlider.value = fuel;
+        fuel = maxfuel;
     }
     void Update()
     {
@@ -44,6 +51,20 @@ public class UIManager : MonoBehaviour
     {
         coin++;
         coinText.text = ": " + coin;
+    }
+    public void Fuel(int increasefuel)
+    {
+        fuel += increasefuel;
+        fuel = Mathf.Min(fuel, maxfuel);
+        fuelSlider.value = fuel;
+    }
+    public void FuelDecrease()
+    {
+        fuel -= 5;        
+       // fuel = Mathf.Max(fuel, 0);
+        fuelSlider.value = fuel;
+        print(fuel);
+
     }
     public void DifficultyUI()
     {

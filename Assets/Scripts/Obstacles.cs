@@ -30,6 +30,20 @@ public class Obstacles : MonoBehaviour
             bgm.Stop();
         }
     }
+    private void Update()
+    {
+        if (UIManager.fuel <= 0)
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            PlatformMovement.MoveSpeed = 0;
+            fall.Play();
+            LevelGenerate.GetComponent<LevelGenerator>().enabled = false;
+            high.UpdateHighScore((int)player.score);
+            StartCoroutine(Death());
+            bgm.Stop();
+        }
+    }
     IEnumerator Death()
     {
         yield return new WaitForSeconds(2.5f);

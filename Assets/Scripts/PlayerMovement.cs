@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
 
+    void Start()
+    {
+        InvokeRepeating(nameof(ConsumeFuelOverTime),1f,1f);
+    }
+
     void Update()
     {
         distanceCovered += Time.deltaTime * -PlatformMovement.MoveSpeed;
@@ -119,5 +124,10 @@ public class PlayerMovement : MonoBehaviour
     {
         score = distanceCovered * 2.5f;
         return (int)(score);
+    }
+
+    public void ConsumeFuelOverTime()
+    {
+        UIManager.Instance.FuelDecrease();  // Call the function to decrease fuel
     }
 }
