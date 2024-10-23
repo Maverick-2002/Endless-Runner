@@ -24773,7 +24773,7 @@ GameObject:
   - component: {fileID: 7525055748651473145}
   m_Layer: 0
   m_Name: Collectables
-  m_TagString: Untagged
+  m_TagString: Collectables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31327,6 +31327,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7525055748651473145}
     m_Modifications:
+    - target: {fileID: 4578012439190182877, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5790994079033864692, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
       propertyPath: m_Name
       value: GoldCoin 1 (7)
@@ -31372,10 +31376,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8234587616744500290, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234587616744500290, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
       propertyPath: coins
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4578012439190182877, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31559,6 +31568,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7525055748651473145}
     m_Modifications:
+    - target: {fileID: 4578012439190182877, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5790994079033864692, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
       propertyPath: m_Name
       value: GoldCoin 1 (12)
@@ -31604,10 +31617,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8234587616744500290, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234587616744500290, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
       propertyPath: coins
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4578012439190182877, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31795,6 +31813,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7525055748651473145}
     m_Modifications:
+    - target: {fileID: 4578012439190182877, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5790994079033864692, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
       propertyPath: m_Name
       value: GoldCoin 1 (11)
@@ -31840,10 +31862,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8234587616744500290, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234587616744500290, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
       propertyPath: coins
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4578012439190182877, guid: b0ba95521075479469dc4fbf40c6feb4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31861,6 +31888,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7525055748651473145}
     m_Modifications:
+    - target: {fileID: 72640234198721085, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 72640234198721085, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 72640234198721085, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256934924607502864, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 544337509147575503, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 570449251011146336, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 574288288280624474, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 580642847020483659, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -31901,11 +31956,312 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 962223080726532272, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 962223080726532272, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 962223080726532272, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143900329254102870, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407542795805561784, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455617884694712108, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1550269826458830606, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619238028789184430, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632070453850557676, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849917704643237303, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026652780616479198, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641069450981362012, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 2641069450981362012, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 2641069450981362012, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043741681836687804, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 3043741681836687804, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 3043741681836687804, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063129057988532115, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063414524173450839, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076442488173575438, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120169791542291096, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412309655705145064, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720082284666634128, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886159380316325130, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920253837940795215, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976285658463515041, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4011649457669570683, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349050951446976857, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465865569935319899, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593973915705707991, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4760459322797215945, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4998264516238198097, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
       propertyPath: m_Name
       value: Bundle
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5342917684894549503, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347804543860132549, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351015045621576528, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647425087150607759, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890353741673127241, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 5890353741673127241, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 5890353741673127241, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904045622839805505, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080780441962783272, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362695601690718353, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6484087253966387379, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586858256869538675, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608979305637249073, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6793653060234404903, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103736049009047927, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386587444158307591, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443342454692219336, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443628195791216652, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457617821332392593, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619186374373548207, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 7619186374373548207, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 7619186374373548207, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8085807216906900676, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184607385381285574, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8208282981011131789, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 8208282981011131789, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 8208282981011131789, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218626415972481608, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284999816400108572, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 8284999816400108572, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb1442c581bf783429d646f13515edcf, type: 3}
+    - target: {fileID: 8284999816400108572, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656224818136117909, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818965254473676772, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854610667128243774, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8910642177381519568, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110532324162127887, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5904045622839805505, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 7457617821332392593, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 3976285658463515041, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 6080780441962783272, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 8910642177381519568, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 1550269826458830606, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 570449251011146336, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 962223080726532272, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 7103736049009047927, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 3063414524173450839, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 6608979305637249073, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 8184607385381285574, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 2641069450981362012, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 3886159380316325130, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 3063129057988532115, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 1143900329254102870, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 5890353741673127241, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 8208282981011131789, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 7619186374373548207, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 3043741681836687804, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 72640234198721085, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 6793653060234404903, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 1632070453850557676, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 8218626415972481608, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 8818965254473676772, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 5647425087150607759, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 3720082284666634128, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 5347804543860132549, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 8284999816400108572, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 6484087253966387379, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 5351015045621576528, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 3120169791542291096, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
+    - {fileID: 4465865569935319899, guid: 5e8be7f85d907cd4ab51ef882cfc8f5a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

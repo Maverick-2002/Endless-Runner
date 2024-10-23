@@ -10,7 +10,7 @@ public class Fuel : MonoBehaviour
         if (collision.gameObject.CompareTag("Fuel"))
         {
             UIManager.Instance.Fuel(10);
-            fuel.Play();
+            AudioManager.Instance.PlaySFX(SoundEnum.Fuel);
             Destroy(collision.gameObject);
         }
     }

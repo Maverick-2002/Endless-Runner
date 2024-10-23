@@ -1,6 +1,3 @@
-using NUnit.Framework;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,8 +18,11 @@ public class UIManager : MonoBehaviour
     public GameObject resumemenu;
     public GameObject Deathmenu;
     public Text FscoreText;
-    public AudioSource bgmSource;
     public Slider fuelSlider;
+
+    // New variable to track player's alive status
+    private bool isPlayerAlive = true;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
     }
+
     private void Start()
     {
         highScore = PlayerPrefs.GetFloat("HighScore", 0);
@@ -42,36 +43,49 @@ public class UIManager : MonoBehaviour
         fuelSlider.value = fuel;
         fuel = maxfuel;
     }
+
     void Update()
     {
         int score = playerController.CalculateScore();
         scoreText.text = ": " + score.ToString();
     }
+
     public void Coin()
     {
         coin++;
         coinText.text = ": " + coin;
     }
+
     public void Fuel(int increasefuel)
     {
         fuel += increasefuel;
         fuel = Mathf.Min(fuel, maxfuel);
         fuelSlider.value = fuel;
     }
+
     public void FuelDecrease()
     {
-        fuel -= 5;        
-       // fuel = Mathf.Max(fuel, 0);
-        fuelSlider.value = fuel;
-        print(fuel);
-
+        // Only decrease fuel if the player is alive
+        if (isPlayerAlive)
+        {
+            fuel -= 5;
+            fuelSlider.value = fuel;
+            print(fuel);
+        }
     }
+
+    public void SetPlayerAlive(bool status)
+    {
+        isPlayerAlive = status;
+    }
+
     public void DifficultyUI()
     {
         print(Dif);
         Dif++;
         DifText.text = ": " + Dif;
     }
+
     public void UpdateHighScore(float newScore)
     {
         float oldHighScore = highScore;
@@ -82,20 +96,23 @@ public class UIManager : MonoBehaviour
             highScoreText.text = ": " + newScore.ToString();
         }
     }
+
     public void PauseMenu()
     {
         pausemenu.SetActive(true);
         resumemenu.SetActive(false);
         Deathmenu.SetActive(false);
-        bgmSource.Stop();
+        AudioManager.Instance.StopMusic(SoundEnum.SoundTrack);
     }
+
     public void HomeUI()
     {
         pausemenu.SetActive(false);
         resumemenu.SetActive(true);
         Deathmenu.SetActive(false);
-        bgmSource.Play();
+        AudioManager.Instance.PlayMusic(SoundEnum.SoundTrack);
     }
+
     public void DeathUI()
     {
         Deathmenu.SetActive(true);
