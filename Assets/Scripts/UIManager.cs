@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour
     {
         if (isPlayerAlive)
         {
-            fuel -= 5;
+            fuel -= 2;
             fuelSlider.value = fuel;
             print(fuel);
         }

@@ -17,34 +17,14 @@ public class HomeScreen : MonoBehaviour
         bgm.Play();
         time = 0;
     }
-    public void Update()
-    {
-        //time += Time.deltaTime;
-        //if (time < 10)
-        //{
-        //    animator.SetInteger("Trans",10);
-        //}
-        //if (time >= 10)
-        //{
-        //    animator.SetInteger("Trans", 20);
-        //}
-        //if (time >=20)
-        //{
-        //    animator.SetInteger("Trans", 30);
-        //}
-        //if (time >= 35)
-        //{
-        //    time = 0;
-        //}
-    }
     public void LevelLoaded()
     {
         SceneManager.LoadScene(1);
     }
-    public void Quit()
-    {
-        Application.Quit();
-    }
+    //public void Quit()
+    //{
+    //    Application.Quit();
+    //}
     public void HighScore()
     {
         float highScore = PlayerPrefs.GetFloat("HighScore", 0);
