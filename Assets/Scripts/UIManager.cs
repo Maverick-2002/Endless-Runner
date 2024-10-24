@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     public GameObject Deathmenu;
     public Text FscoreText;
     public Slider fuelSlider;
-    private bool isPlayerAlive = true;
+    public static bool isPlayerAlive = true;
     private ReactToUnity reactToUnity;
 
     private void Awake()
@@ -51,7 +51,12 @@ public class UIManager : MonoBehaviour
         if (reactToUnity._Energy<=0)
         {
             LevelGenerator.Instance.StopMovement();
-            Obstacles.Instance.HandlePlayerDeath(); 
+            UIManager.isPlayerAlive = false; 
+        }
+        else
+        {
+            LevelGenerator.Instance.StartMovement();
+            UIManager.isPlayerAlive=true;
         }
     }
 
@@ -59,6 +64,10 @@ public class UIManager : MonoBehaviour
     {
         int score = playerController.CalculateScore();
         scoreText.text = ": " + score.ToString();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ReactToUnity.instance.GiveEnergy_Unity(50);
+        }
     }
 
     public void Coin()

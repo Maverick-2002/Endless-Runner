@@ -27,30 +27,33 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        distanceCovered += Time.deltaTime * -PlatformMovement.MoveSpeed;
+        if (UIManager.isPlayerAlive == true)
+        {
+            distanceCovered += Time.deltaTime * -PlatformMovement.MoveSpeed;
 
-        if (!isChangingLane)
-        {
-            HandleInput();
-        }
+            if (!isChangingLane)
+            {
+                HandleInput();
+            }
 
-        Vector3 targetPosition = transform.position;
-        if (Lane == 0)
-        {
-            targetPosition.x = -DisLane;
-        }
-        else if (Lane == 1)
-        {
-            targetPosition.x = 0;
-        }
-        else if (Lane == 2)
-        {
-            targetPosition.x = DisLane;
-        }
+            Vector3 targetPosition = transform.position;
+            if (Lane == 0)
+            {
+                targetPosition.x = -DisLane;
+            }
+            else if (Lane == 1)
+            {
+                targetPosition.x = 0;
+            }
+            else if (Lane == 2)
+            {
+                targetPosition.x = DisLane;
+            }
 
-        transform.position = Vector3.Lerp(transform.position, targetPosition, smoothness * Time.deltaTime);
-        Quaternion targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, -targetTiltZ);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, smoothness * Time.deltaTime);
+            Quaternion targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, -targetTiltZ);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 
     void HandleInput()
@@ -77,11 +80,7 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(ChangeLane(1));
             }
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReactToUnity.instance.GiveEnergy_Unity(50);
-            LevelGenerator.Instance.StartMovement();
-        }
+        
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
