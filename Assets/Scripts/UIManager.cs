@@ -10,7 +10,6 @@ public class UIManager : MonoBehaviour
     public Text coinText;
     public Text scoreText;
     public PlayerMovement playerController;
-    public Obstacles obstacles;
     public Text highScoreText;
     public Text DifText;
     public float highScore;
@@ -43,6 +42,8 @@ public class UIManager : MonoBehaviour
         fuelSlider.maxValue = reactToUnity._maxEnergy;
         reactToUnity._Energy = reactToUnity._maxEnergy;
         fuelSlider.value = reactToUnity._Energy;
+        isPlayerAlive = true;
+        
     }
     void SetStamina()
     {
@@ -50,7 +51,7 @@ public class UIManager : MonoBehaviour
         if (reactToUnity._Energy<=0)
         {
             LevelGenerator.Instance.StopMovement();
-            obstacles.HandlePlayerDeath();
+            Obstacles.Instance.HandlePlayerDeath();
         }
     }
 

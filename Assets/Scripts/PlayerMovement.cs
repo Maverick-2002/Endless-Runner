@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private float laneChangeDelay = 0.15f;
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
+    public ParticleSystem leftparticleFront;
+    public ParticleSystem rightparticleFront;
+    public ParticleSystem leftparticleBack;
+    public ParticleSystem rightparticleBack;
 
     void Start()
     {
@@ -56,6 +60,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Lane > 0)
             {
+                rightparticleFront.Stop();
+                rightparticleBack.Stop();
+                leftparticleFront.Play();
+                leftparticleBack.Play();
                 StartCoroutine(ChangeLane(-1));
             }
         }
@@ -63,16 +71,18 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Lane < 2)
             {
+                leftparticleFront.Stop();
+                leftparticleBack.Stop();
+                rightparticleFront.Play();
+                rightparticleBack.Play();
                 StartCoroutine(ChangeLane(1));
             }
         }
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             ReactToUnity.instance.GiveEnergy_Unity(50);
             LevelGenerator.Instance.StartMovement();
         }
-
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -117,9 +127,10 @@ public class PlayerMovement : MonoBehaviour
         isChangingLane = true;
         targetTiltZ = direction * tiltAngle;
         yield return new WaitForSeconds(laneChangeDelay);
-
         Lane += direction;
         targetTiltZ = 0f;
+        //leftparticle.SetActive(false);
+        //rightparticle.SetActive(false);
         isChangingLane = false;
     }
 

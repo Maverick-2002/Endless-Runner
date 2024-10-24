@@ -3,11 +3,23 @@ using UnityEngine;
 
 public class Obstacles : MonoBehaviour
 {
+    public static Obstacles Instance;
     public GameObject LevelGenerate;
     public PlayerMovement player;
     public UIManager high;
     private bool isDead = false;
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     private void Start()
     {
         player = GetComponent<PlayerMovement>();
@@ -18,7 +30,7 @@ public class Obstacles : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacles"))
         {
-            HandleCollision();
+            HandlePlayerDeath();
         }
     }
 

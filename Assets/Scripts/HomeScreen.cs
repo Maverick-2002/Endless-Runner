@@ -17,6 +17,8 @@ public class HomeScreen : MonoBehaviour
         bgm.Play();
         time = 0;
         LevelGenerator.Instance.StartMovement();
+        PlatformMovement.MoveSpeed = -8f;
+        UIManager.Instance.SetPlayerAlive(true);
     }
     public void LevelLoaded()
     {
