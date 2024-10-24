@@ -49,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.position = Vector3.Lerp(transform.position, targetPosition, smoothness * Time.deltaTime);
-
         Quaternion targetRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, -targetTiltZ);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }

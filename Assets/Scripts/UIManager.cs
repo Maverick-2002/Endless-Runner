@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
         if (reactToUnity._Energy<=0)
         {
             LevelGenerator.Instance.StopMovement();
-            Obstacles.Instance.HandlePlayerDeath();
+            Obstacles.Instance.HandlePlayerDeath(); 
         }
     }
 

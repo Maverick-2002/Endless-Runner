@@ -41,7 +41,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         PlatformMovement.MoveSpeed = -8f;
         LevelGenerator.Instance.StartMovement();
-        UIManager.Instance.SetPlayerAlive(true);
+        UIManager.Instance.SetPlayerAlive(true);    
     }
     public void Exit()
     {
