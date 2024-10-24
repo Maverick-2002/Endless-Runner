@@ -12,7 +12,6 @@ public class UIManager : MonoBehaviour
     public PlayerMovement playerController;
     public Text highScoreText;
     public Text DifText;
-    public float highScore;
     public GameObject pausemenu;
     public GameObject resumemenu;
     public GameObject Deathmenu;
@@ -37,8 +36,8 @@ public class UIManager : MonoBehaviour
         reactToUnity = ReactToUnity.instance;
         ReactToUnity.OnUpdateEnergy += SetStamina;
         ReactToUnity.OnOutOfEnergy += SetStamina;
-        highScore = PlayerPrefs.GetFloat("HighScore", 0);
-        highScoreText.text = ": " + highScore.ToString();
+        GameManager.highScore = PlayerPrefs.GetFloat("HighScore", 0);
+        highScoreText.text = ": " + GameManager.highScore.ToString();
         fuelSlider.maxValue = reactToUnity._maxEnergy;
         reactToUnity._Energy = reactToUnity._maxEnergy;
         fuelSlider.value = reactToUnity._Energy;
@@ -51,7 +50,8 @@ public class UIManager : MonoBehaviour
         if (reactToUnity._Energy<=0)
         {
             LevelGenerator.Instance.StopMovement();
-            UIManager.isPlayerAlive = false; 
+            UIManager.isPlayerAlive = false;
+            AudioManager.Instance.PlaySFX(SoundEnum.Fall);
         }
         else
         {
@@ -98,7 +98,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHighScore(float newScore)
     {
-        float oldHighScore = highScore;
+        float oldHighScore = GameManager.highScore;
         if (newScore > oldHighScore)
         {
             PlayerPrefs.SetFloat("HighScore", newScore);

@@ -11,8 +11,7 @@ public class Obstacles : MonoBehaviour
     {
         player = GetComponent<PlayerMovement>();
         isDead = false;
-}
-
+    }
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Obstacles"))
@@ -20,28 +19,24 @@ public class Obstacles : MonoBehaviour
             HandlePlayerDeath();
         }
     }
-
     private void Update()
     {
-        if (UIManager.fuel <= 0 && !isDead)
-        {
-            HandlePlayerDeath();
-        }
+        //if (UIManager.fuel <= 0 && !isDead)
+        //{
+        //    HandlePlayerDeath();
+        //}
     }
-
-    public void HandleCollision()
-    {
-        gameObject.GetComponent<PlayerMovement>().enabled = false;
-        high.UpdateHighScore((int)player.score);
-        StartCoroutine(Death());
-    }
-
     public void HandlePlayerDeath()
     {
         isDead = true;
         HandleCollision();
     }
-
+    public void HandleCollision()
+    {
+        UIManager.isPlayerAlive = false;
+        high.UpdateHighScore((int)player.score);
+        StartCoroutine(Death());
+    }
     IEnumerator Death()
     {
         UIManager.Instance.SetPlayerAlive(false);
