@@ -11,7 +11,7 @@ public class Obstacles : MonoBehaviour
     {
         player = GetComponent<PlayerMovement>();
         isDead = false;
-    }
+    }   
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Obstacles"))

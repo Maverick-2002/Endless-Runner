@@ -65,7 +65,7 @@ public class ReactToUnity : MonoBehaviour
     public void OnGameOver()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-            GameOver_React(GameManager.instance.Score);
+            GameOver_React((int)GameManager.highScore);
 #endif
     }
 
