@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private float rotationSpeed = 5f;
     private bool isChangingLane = false;
     private float laneChangeDelay = 0.15f;
-
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
 
@@ -66,6 +65,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 StartCoroutine(ChangeLane(1));
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ReactToUnity.instance.GiveEnergy_Unity(50);
+            LevelGenerator.Instance.StartMovement();
         }
 
         if (Input.touchCount > 0)
@@ -126,6 +131,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void ConsumeFuelOverTime()
     {
-        UIManager.Instance.FuelDecrease();  // Call the function to decrease fuel
+        UIManager.Instance.FuelDecrease(5); 
     }
 }

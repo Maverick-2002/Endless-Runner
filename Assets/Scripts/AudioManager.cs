@@ -58,7 +58,6 @@ public class AudioManager : MonoBehaviour
         }
 
     }
-
     public void PlaySFX(SoundEnum soundName)
     {
         Sound sounds = Array.Find(sfxSounds, x => x.soundName == soundName);

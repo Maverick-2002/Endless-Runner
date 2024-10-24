@@ -33,7 +33,6 @@ public class PauseMenu : MonoBehaviour
         UIManager.Instance.HomeUI();
         Time.timeScale = 1f;
         GamePaused = false;
-        
     }
     public void Restart()
     {
@@ -41,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         UIManager.Instance.HomeUI();
         Time.timeScale = 1f;
         PlatformMovement.MoveSpeed = -8f;
+        LevelGenerator.Instance.StartMovement();
     }
     public void Exit()
     {

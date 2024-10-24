@@ -8,6 +8,9 @@ public class PlatformMovement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * MoveSpeed * Time.deltaTime, Space.World);
+        if (LevelGenerator.isMovement == true)
+        {
+            transform.Translate(Vector3.forward * MoveSpeed * Time.deltaTime, Space.World);
+        }
     }
 }

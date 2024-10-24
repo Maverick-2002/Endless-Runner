@@ -16,6 +16,7 @@ public class HomeScreen : MonoBehaviour
     {
         bgm.Play();
         time = 0;
+        LevelGenerator.Instance.StartMovement();
     }
     public void LevelLoaded()
     {

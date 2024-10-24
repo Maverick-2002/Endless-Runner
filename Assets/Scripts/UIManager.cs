@@ -6,11 +6,11 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     private int coin = 0;
     public static int fuel = 50;
-    private int maxfuel = 50;
     private int Dif = 1;
     public Text coinText;
     public Text scoreText;
     public PlayerMovement playerController;
+    public Obstacles obstacles;
     public Text highScoreText;
     public Text DifText;
     public float highScore;
@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     public Text FscoreText;
     public Slider fuelSlider;
     private bool isPlayerAlive = true;
+    private ReactToUnity reactToUnity;
 
     private void Awake()
     {
@@ -32,14 +33,25 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
     }
-
     private void Start()
     {
+        reactToUnity = ReactToUnity.instance;
+        ReactToUnity.OnUpdateEnergy += SetStamina;
+        ReactToUnity.OnOutOfEnergy += SetStamina;
         highScore = PlayerPrefs.GetFloat("HighScore", 0);
         highScoreText.text = ": " + highScore.ToString();
-        fuelSlider.maxValue = maxfuel;
-        fuelSlider.value = fuel;
-        fuel = maxfuel;
+        fuelSlider.maxValue = reactToUnity._maxEnergy;
+        reactToUnity._Energy = reactToUnity._maxEnergy;
+        fuelSlider.value = reactToUnity._Energy;
+    }
+    void SetStamina()
+    {
+        fuelSlider.value = reactToUnity._Energy;
+        if (reactToUnity._Energy<=0)
+        {
+            LevelGenerator.Instance.StopMovement();
+            obstacles.HandlePlayerDeath();
+        }
     }
 
     void Update()
@@ -53,21 +65,12 @@ public class UIManager : MonoBehaviour
         coin++;
         coinText.text = ": " + coin;
     }
-
-    public void Fuel(int increasefuel)
-    {
-        fuel += increasefuel;
-        fuel = Mathf.Min(fuel, maxfuel);
-        fuelSlider.value = fuel;
-    }
-
-    public void FuelDecrease()
+    public void FuelDecrease(int decreaseFuel)
     {
         if (isPlayerAlive)
         {
-            fuel -= 2;
-            fuelSlider.value = fuel;
-            print(fuel);
+            reactToUnity?.UseEnergy_Unity(Energy: (int)decreaseFuel);
+            print(decreaseFuel);
         }
     }
 
