@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
         if (isPlayerAlive)
         {
             reactToUnity?.UseEnergy_Unity(Energy: (int)decreaseFuel);
-            print(decreaseFuel);
+            print(reactToUnity._Energy);
         }
     }
 
